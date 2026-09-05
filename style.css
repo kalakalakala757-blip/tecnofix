@@ -12,7 +12,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #0b0f19;
-    color: #ffffff;
+    color: white;
     line-height: 1.6;
 }
 
@@ -38,6 +38,7 @@ header {
     padding: 20px 8%;
 
     background: rgba(11, 15, 25, 0.95);
+
     border-bottom: 1px solid #20283a;
 }
 
@@ -134,7 +135,8 @@ nav a:hover {
 
 .principal:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 229, 255, 0.25);
+    box-shadow:
+        0 10px 30px rgba(0, 229, 255, 0.25);
 }
 
 .secundario {
@@ -149,20 +151,23 @@ nav a:hover {
 
 
 /* =========================
-   TARJETA DEL HERO
+   TARJETA HERO
 ========================= */
 
 .hero-card {
     width: 320px;
+
     padding: 45px 30px;
 
     text-align: center;
 
     background: #111827;
+
     border: 1px solid #263247;
     border-radius: 20px;
 
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.4);
 
     animation: flotar 4s ease-in-out infinite;
 }
@@ -172,22 +177,21 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-.hero-card h2 {
-    margin-bottom: 10px;
-}
-
 .hero-card p {
     color: #94a3b8;
 }
 
 @keyframes flotar {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
 
     50% {
         transform: translateY(-12px);
     }
+
 }
 
 
@@ -206,8 +210,10 @@ section {
 
 .titulo-seccion p {
     color: #00e5ff;
+
     font-size: 13px;
     font-weight: bold;
+
     letter-spacing: 2px;
 }
 
@@ -218,248 +224,17 @@ section {
 
 
 /* =========================
-   PRODUCTOS
-========================= */
-
-.productos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.producto {
-    padding: 30px;
-
-    background: #111827;
-    border: 1px solid #263247;
-    border-radius: 15px;
-
-    transition: 0.3s;
-}
-
-.producto:hover {
-    transform: translateY(-8px);
-    border-color: #00e5ff;
-}
-
-.producto-icono {
-    font-size: 55px;
-    margin-bottom: 20px;
-}
-
-.producto h3 {
-    font-size: 23px;
-    margin-bottom: 10px;
-}
-
-.producto p {
-    color: #94a3b8;
-    margin-bottom: 20px;
-}
-
-.producto strong {
-    display: block;
-    color: #00e5ff;
-    margin-bottom: 20px;
-}
-
-.producto button {
-    width: 100%;
-    padding: 12px;
-
-    background: transparent;
-    border: 1px solid #334155;
-    border-radius: 7px;
-
-    color: white;
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.producto button:hover {
-    background: #00e5ff;
-    color: #061018;
-}
-
-
-/* =========================
-   REPARACIONES
-========================= */
-
-.reparaciones {
-    background: #0f1522;
-}
-
-.servicios {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.servicio {
-    text-align: center;
-    padding: 35px 25px;
-
-    background: #111827;
-    border-radius: 15px;
-
-    border: 1px solid #263247;
-}
-
-.servicio span {
-    font-size: 55px;
-}
-
-.servicio h3 {
-    margin: 15px 0 10px;
-    font-size: 23px;
-}
-
-.servicio p {
-    color: #94a3b8;
-}
-
-
-/* =========================
-   NOSOTROS
-========================= */
-
-.nosotros {
-    display: flex;
-    justify-content: center;
-}
-
-.nosotros > div {
-    max-width: 800px;
-    text-align: center;
-}
-
-.nosotros h2 {
-    font-size: 45px;
-    margin: 10px 0 20px;
-}
-
-.nosotros p:not(.mini-titulo) {
-    color: #aab4c5;
-}
-
-.nosotros ul {
-    list-style: none;
-    margin-top: 25px;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-
-    color: #cbd5e1;
-}
-
-
-/* =========================
-   CONTACTO
-========================= */
-
-.contacto {
-    background: #0f1522;
-}
-
-.contacto-contenido {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.contacto-contenido > div {
-    padding: 30px;
-
-    background: #111827;
-    border-radius: 12px;
-    border: 1px solid #263247;
-}
-
-.contacto h3 {
-    margin-bottom: 10px;
-}
-
-.contacto p {
-    color: #94a3b8;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    text-align: center;
-    padding: 30px;
-
-    color: #64748b;
-    background: #080b12;
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 800px) {
-
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        gap: 60px;
-    }
-
-    .hero-text > p:not(.mini-titulo) {
-        margin: auto;
-    }
-
-    .botones {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .productos,
-    .servicios,
-    .contacto-contenido {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-card {
-        width: 100%;
-        max-width: 320px;
-    }
-
-    .nosotros ul {
-        grid-template-columns: 1fr;
-    }
-
-    .titulo-seccion h2 {
-        font-size: 34px;
-    }
-}
-/* =========================
-   FILTROS DE PRODUCTOS
+   FILTROS
 ========================= */
 
 .filtros {
     display: flex;
     justify-content: center;
+
     gap: 12px;
+
     margin-bottom: 40px;
+
     flex-wrap: wrap;
 }
 
@@ -467,10 +242,12 @@ footer {
     padding: 10px 20px;
 
     background: transparent;
+
     border: 1px solid #334155;
     border-radius: 20px;
 
     color: #cbd5e1;
+
     cursor: pointer;
 
     transition: 0.3s;
@@ -485,12 +262,36 @@ footer {
 
 
 /* =========================
-   PRODUCTOS NUEVOS
+   PRODUCTOS
 ========================= */
+
+.productos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
 
 .producto {
     overflow: hidden;
+
     padding: 0;
+
+    background: #111827;
+
+    border: 1px solid #263247;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-8px);
+
+    border-color: #00e5ff;
 }
 
 .producto-imagen {
@@ -516,56 +317,107 @@ footer {
 
 .categoria {
     font-size: 11px;
+
     font-weight: bold;
+
     letter-spacing: 2px;
+
     color: #00e5ff;
 }
 
 .producto-info h3 {
+    font-size: 23px;
+
     margin-top: 8px;
 }
 
 .producto-info p {
     min-height: 50px;
+
+    color: #94a3b8;
+
+    margin: 10px 0 20px;
 }
 
 .precio {
     font-size: 24px;
+
     font-weight: bold;
+
     margin-bottom: 20px;
 }
 
 .producto button {
-    font-size: 15px;
+    width: 100%;
+
+    padding: 12px;
+
+    background: transparent;
+
+    border: 1px solid #334155;
+
+    border-radius: 7px;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
 }
+
+.producto button:hover {
+    background: #00e5ff;
+
+    color: #061018;
+}
+
+
 /* =========================
-   REPARACIONES INTERACTIVAS
+   REPARACIONES
 ========================= */
+
+.reparaciones {
+    background: #0f1522;
+}
+
+
+/* SELECTOR */
 
 .selector-dispositivos {
     display: flex;
+
     justify-content: center;
+
     gap: 20px;
+
     margin-bottom: 40px;
 }
 
 .dispositivo {
     width: 150px;
+
     padding: 20px;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     gap: 8px;
 
     background: #111827;
+
     border: 1px solid #263247;
+
     border-radius: 12px;
 
     color: white;
+
     font-size: 35px;
 
     cursor: pointer;
+
     transition: 0.3s;
 }
 
@@ -576,29 +428,41 @@ footer {
 .dispositivo:hover,
 .dispositivo.activo {
     border-color: #00e5ff;
+
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 229, 255, 0.10);
+
+    box-shadow:
+        0 10px 30px rgba(0, 229, 255, 0.10);
 }
 
 
+/* LISTA */
+
 .lista-reparaciones {
     max-width: 800px;
+
     margin: auto;
 
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 15px;
 }
 
 .reparacion {
     display: flex;
+
     align-items: center;
+
     gap: 20px;
 
     padding: 20px;
 
     background: #111827;
+
     border: 1px solid #263247;
+
     border-radius: 10px;
 
     transition: 0.3s;
@@ -618,23 +482,32 @@ footer {
 
 .reparacion p {
     color: #94a3b8;
+
     font-size: 14px;
 }
 
 
+/* PRESUPUESTO */
+
 .presupuesto {
     max-width: 800px;
+
     margin: 40px auto 0;
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     gap: 30px;
 
     padding: 25px;
 
     background: #111827;
+
     border: 1px solid #263247;
+
     border-radius: 12px;
 }
 
@@ -646,13 +519,17 @@ footer {
     padding: 13px 20px;
 
     background: #00e5ff;
+
     border: none;
+
     border-radius: 7px;
 
     color: #061018;
+
     font-weight: bold;
 
     cursor: pointer;
+
     white-space: nowrap;
 
     transition: 0.3s;
@@ -660,6 +537,290 @@ footer {
 
 .presupuesto button:hover {
     transform: translateY(-3px);
+}
+
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.formulario-reparacion {
+    max-width: 800px;
+
+    margin: 60px auto 0;
+
+    padding: 40px;
+
+    background: #111827;
+
+    border: 1px solid #263247;
+
+    border-radius: 15px;
+}
+
+.titulo-formulario {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.titulo-formulario p {
+    color: #00e5ff;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.titulo-formulario h2 {
+    font-size: 30px;
+
+    margin-top: 8px;
+}
+
+#formulario-reparacion {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.campo:nth-child(4) {
+    grid-column: 1 / -1;
+}
+
+.campo label {
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #cbd5e1;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    background: #0b0f19;
+
+    border: 1px solid #334155;
+
+    border-radius: 7px;
+
+    color: white;
+
+    font-family: inherit;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #00e5ff;
+}
+
+.campo textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+.boton-formulario {
+    grid-column: 1 / -1;
+
+    padding: 14px;
+
+    background: #00e5ff;
+
+    border: none;
+
+    border-radius: 7px;
+
+    color: #061018;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.boton-formulario:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 229, 255, 0.2);
+}
+
+
+/* =========================
+   NOSOTROS
+========================= */
+
+.nosotros {
+    display: flex;
+
+    justify-content: center;
+}
+
+.nosotros > div {
+    max-width: 800px;
+
+    text-align: center;
+}
+
+.nosotros h2 {
+    font-size: 45px;
+
+    margin: 10px 0 20px;
+}
+
+.nosotros p:not(.mini-titulo) {
+    color: #aab4c5;
+}
+
+.nosotros ul {
+    list-style: none;
+
+    margin-top: 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    color: #cbd5e1;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto {
+    background: #0f1522;
+}
+
+.contacto-contenido {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.contacto-contenido > div {
+    padding: 30px;
+
+    background: #111827;
+
+    border-radius: 12px;
+
+    border: 1px solid #263247;
+}
+
+.contacto h3 {
+    margin-bottom: 10px;
+}
+
+.contacto p {
+    color: #94a3b8;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #64748b;
+
+    background: #080b12;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 60px;
+    }
+
+    .hero-text > p:not(.mini-titulo) {
+        margin: auto;
+    }
+
+    .botones {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .productos,
+    .contacto-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-card {
+        width: 100%;
+
+        max-width: 320px;
+    }
+
+    .nosotros ul {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 34px;
+    }
+
 }
 
 
@@ -675,7 +836,26 @@ footer {
 
     .presupuesto {
         flex-direction: column;
+
         text-align: center;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .formulario-reparacion {
+        padding: 25px 20px;
+    }
+
+    #formulario-reparacion {
+        grid-template-columns: 1fr;
+    }
+
+    .campo:nth-child(4),
+    .boton-formulario {
+        grid-column: auto;
     }
 
 }
