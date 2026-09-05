@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>TecnoFix | Tecnología y Reparaciones</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
-<script src="script.js"></script>
+
 <body>
 
+    <!-- ================= HEADER ================= -->
+
     <header>
+
         <div class="logo">
             ⚡ TecnoFix
         </div>
@@ -21,16 +26,21 @@
             <a href="#nosotros">Nosotros</a>
             <a href="#contacto">Contacto</a>
         </nav>
+
     </header>
 
 
     <main>
 
-        <!-- INICIO -->
+        <!-- ================= INICIO ================= -->
+
         <section id="inicio" class="hero">
 
             <div class="hero-text">
-                <p class="mini-titulo">TECNOLOGÍA • SERVICIO • CONFIANZA</p>
+
+                <p class="mini-titulo">
+                    TECNOLOGÍA • SERVICIO • CONFIANZA
+                </p>
 
                 <h1>
                     Tu tecnología,
@@ -38,348 +48,658 @@
                 </h1>
 
                 <p>
-                    Venta de dispositivos electrónicos, accesorios
-                    y servicio técnico especializado.
+                    Venta de dispositivos electrónicos,
+                    accesorios y servicio técnico especializado.
                 </p>
 
                 <div class="botones">
+
                     <a href="#productos" class="boton principal">
                         Ver productos
                     </a>
 
                     <a href="#reparaciones" class="boton secundario">
                         Reparaciones
-<!-- REPARACIONES -->
-<section id="reparaciones" class="reparaciones">
+                    </a>
 
-    <div class="titulo-seccion">
-        <p>SERVICIO TÉCNICO</p>
-        <h2>¿Qué dispositivo necesitás reparar?</h2>
-    </div>
+                </div>
 
-    <div class="selector-dispositivos">
-
-        <button class="dispositivo activo"
-                onclick="mostrarReparaciones('celular', this)">
-            📱
-            <span>Celular</span>
-        </button>
-
-        <button class="dispositivo"
-                onclick="mostrarReparaciones('notebook', this)">
-            💻
-            <span>Notebook</span>
-        </button>
-
-        <button class="dispositivo"
-                onclick="mostrarReparaciones('tablet', this)">
-            📲
-            <span>Tablet</span>
-        </button>
-
-    </div>
-
-
-    <div id="lista-reparaciones" class="lista-reparaciones">
-
-        <div class="reparacion">
-            <span>🔧</span>
-            <div>
-                <h3>Cambio de pantalla</h3>
-                <p>Reemplazo de pantalla dañada.</p>
             </div>
-        </div>
-
-        <div class="reparacion">
-            <span>🔋</span>
-            <div>
-                <h3>Cambio de batería</h3>
-                <p>Reemplazo de batería desgastada.</p>
-            </div>
-        </div>
-
-        <div class="reparacion">
-            <span>🔌</span>
-            <div>
-                <h3>Conector de carga</h3>
-                <p>Revisión y reparación del puerto de carga.</p>
-            </div>
-        </div>
-
-        <div class="reparacion">
-            <span>⚙️</span>
-            <div>
-                <h3>Problemas de software</h3>
-                <p>Diagnóstico y solución de errores del sistema.</p>
-            </div>
-        </div>
-
-    </div>
 
 
-    <div class="presupuesto">
+            <div class="hero-card">
 
-        <div>
-            <h3>¿Necesitás un presupuesto?</h3>
-            <p>
-                Contanos qué le sucede a tu dispositivo
-                y te ayudamos.
-            </p>
-        </div>
+                <div class="icono">
+                    📱
+                </div>
 
-        <button onclick="solicitarPresupuesto()">
-            Solicitar presupuesto →
-        </button>
+                <h2>
+                    Servicio Técnico
+                </h2>
 
-    </div>
-
-</section>
+                <p>
                     Celulares · Tablets · Notebooks
                 </p>
+
             </div>
 
         </section>
 
 
-<!-- PRODUCTOS -->
-<section id="productos">
 
-    <div class="titulo-seccion">
-        <p>TECNOLOGÍA PARA VOS</p>
-        <h2>Productos destacados</h2>
-    </div>
+        <!-- ================= PRODUCTOS ================= -->
 
-    <div class="filtros">
-        <button class="filtro activo" onclick="filtrarProductos('todos')">
-            Todos
-        </button>
+        <section id="productos">
 
-        <button class="filtro" onclick="filtrarProductos('celulares')">
-            Celulares
-        </button>
-
-        <button class="filtro" onclick="filtrarProductos('audio')">
-            Audio
-        </button>
-
-        <button class="filtro" onclick="filtrarProductos('accesorios')">
-            Accesorios
-        </button>
-    </div>
-
-    <div class="productos">
-
-        <article class="producto" data-categoria="celulares">
-
-            <div class="producto-imagen">
-                📱
-            </div>
-
-            <div class="producto-info">
-                <span class="categoria">CELULAR</span>
-
-                <h3>Nova X Pro</h3>
+            <div class="titulo-seccion">
 
                 <p>
-                    Smartphone de última generación
-                    con pantalla de alta resolución.
+                    TECNOLOGÍA PARA VOS
                 </p>
 
-                <div class="precio">
-                    $499.999
-                </div>
+                <h2>
+                    Productos destacados
+                </h2>
 
-                <button onclick="consultarProducto('Nova X Pro')">
-                    Consultar
+            </div>
+
+
+            <div class="filtros">
+
+                <button class="filtro activo"
+                        onclick="filtrarProductos('todos', this)">
+                    Todos
                 </button>
-            </div>
 
-        </article>
-
-
-        <article class="producto" data-categoria="audio">
-
-            <div class="producto-imagen">
-                🎧
-            </div>
-
-            <div class="producto-info">
-                <span class="categoria">AUDIO</span>
-
-                <h3>SoundBeat Air</h3>
-
-                <p>
-                    Auriculares inalámbricos con
-                    cancelación de ruido.
-                </p>
-
-                <div class="precio">
-                    $79.999
-                </div>
-
-                <button onclick="consultarProducto('SoundBeat Air')">
-                    Consultar
+                <button class="filtro"
+                        onclick="filtrarProductos('celulares', this)">
+                    Celulares
                 </button>
-            </div>
 
-        </article>
-
-
-        <article class="producto" data-categoria="accesorios">
-
-            <div class="producto-imagen">
-                🔋
-            </div>
-
-            <div class="producto-info">
-                <span class="categoria">ACCESORIO</span>
-
-                <h3>PowerCharge 30W</h3>
-
-                <p>
-                    Cargador rápido compatible con
-                    múltiples dispositivos.
-                </p>
-
-                <div class="precio">
-                    $24.999
-                </div>
-
-                <button onclick="consultarProducto('PowerCharge 30W')">
-                    Consultar
+                <button class="filtro"
+                        onclick="filtrarProductos('audio', this)">
+                    Audio
                 </button>
-            </div>
 
-        </article>
-
-
-        <article class="producto" data-categoria="accesorios">
-
-            <div class="producto-imagen">
-                ⌨️
-            </div>
-
-            <div class="producto-info">
-                <span class="categoria">ACCESORIO</span>
-
-                <h3>KeyPro RGB</h3>
-
-                <p>
-                    Teclado mecánico para gaming
-                    y trabajo.
-                </p>
-
-                <div class="precio">
-                    $64.999
-                </div>
-
-                <button onclick="consultarProducto('KeyPro RGB')">
-                    Consultar
+                <button class="filtro"
+                        onclick="filtrarProductos('accesorios', this)">
+                    Accesorios
                 </button>
+
             </div>
 
-        </article>
 
-    </div>
+            <div class="productos">
 
-</section>
-        
-        <!-- REPARACIONES -->
+
+                <!-- PRODUCTO 1 -->
+
+                <article class="producto"
+                         data-categoria="celulares">
+
+                    <div class="producto-imagen">
+                        📱
+                    </div>
+
+                    <div class="producto-info">
+
+                        <span class="categoria">
+                            CELULAR
+                        </span>
+
+                        <h3>
+                            Nova X Pro
+                        </h3>
+
+                        <p>
+                            Smartphone de última generación
+                            con pantalla de alta resolución.
+                        </p>
+
+                        <div class="precio">
+                            $499.999
+                        </div>
+
+                        <button onclick="consultarProducto('Nova X Pro')">
+                            Consultar
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PRODUCTO 2 -->
+
+                <article class="producto"
+                         data-categoria="audio">
+
+                    <div class="producto-imagen">
+                        🎧
+                    </div>
+
+                    <div class="producto-info">
+
+                        <span class="categoria">
+                            AUDIO
+                        </span>
+
+                        <h3>
+                            SoundBeat Air
+                        </h3>
+
+                        <p>
+                            Auriculares inalámbricos con
+                            excelente calidad de sonido.
+                        </p>
+
+                        <div class="precio">
+                            $79.999
+                        </div>
+
+                        <button onclick="consultarProducto('SoundBeat Air')">
+                            Consultar
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PRODUCTO 3 -->
+
+                <article class="producto"
+                         data-categoria="accesorios">
+
+                    <div class="producto-imagen">
+                        🔋
+                    </div>
+
+                    <div class="producto-info">
+
+                        <span class="categoria">
+                            ACCESORIO
+                        </span>
+
+                        <h3>
+                            PowerCharge 30W
+                        </h3>
+
+                        <p>
+                            Cargador rápido compatible con
+                            múltiples dispositivos.
+                        </p>
+
+                        <div class="precio">
+                            $24.999
+                        </div>
+
+                        <button onclick="consultarProducto('PowerCharge 30W')">
+                            Consultar
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PRODUCTO 4 -->
+
+                <article class="producto"
+                         data-categoria="accesorios">
+
+                    <div class="producto-imagen">
+                        ⌨️
+                    </div>
+
+                    <div class="producto-info">
+
+                        <span class="categoria">
+                            ACCESORIO
+                        </span>
+
+                        <h3>
+                            KeyPro RGB
+                        </h3>
+
+                        <p>
+                            Teclado mecánico para gaming
+                            y trabajo.
+                        </p>
+
+                        <div class="precio">
+                            $64.999
+                        </div>
+
+                        <button onclick="consultarProducto('KeyPro RGB')">
+                            Consultar
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= REPARACIONES ================= -->
+
         <section id="reparaciones" class="reparaciones">
 
             <div class="titulo-seccion">
-                <p>SERVICIO TÉCNICO</p>
-                <h2>¿Qué podemos reparar?</h2>
+
+                <p>
+                    SERVICIO TÉCNICO
+                </p>
+
+                <h2>
+                    ¿Qué dispositivo necesitás reparar?
+                </h2>
+
             </div>
 
-            <div class="servicios">
 
-                <div class="servicio">
-                    <span>📱</span>
-                    <h3>Celulares</h3>
-                    <p>
-                        Pantallas, baterías, conectores
-                        y problemas de software.
-                    </p>
+            <!-- SELECTOR -->
+
+            <div class="selector-dispositivos">
+
+                <button class="dispositivo activo"
+                        onclick="mostrarReparaciones('celular', this)">
+
+                    📱
+
+                    <span>
+                        Celular
+                    </span>
+
+                </button>
+
+
+                <button class="dispositivo"
+                        onclick="mostrarReparaciones('notebook', this)">
+
+                    💻
+
+                    <span>
+                        Notebook
+                    </span>
+
+                </button>
+
+
+                <button class="dispositivo"
+                        onclick="mostrarReparaciones('tablet', this)">
+
+                    📲
+
+                    <span>
+                        Tablet
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- LISTA DE REPARACIONES -->
+
+            <div id="lista-reparaciones"
+                 class="lista-reparaciones">
+
+
+                <div class="reparacion">
+
+                    <span>
+                        🔧
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Cambio de pantalla
+                        </h3>
+
+                        <p>
+                            Reemplazo de pantalla dañada.
+                        </p>
+
+                    </div>
+
                 </div>
 
-                <div class="servicio">
-                    <span>💻</span>
-                    <h3>Notebooks</h3>
-                    <p>
-                        Limpieza, mantenimiento,
-                        sistema operativo y componentes.
-                    </p>
+
+                <div class="reparacion">
+
+                    <span>
+                        🔋
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Cambio de batería
+                        </h3>
+
+                        <p>
+                            Reemplazo de batería desgastada.
+                        </p>
+
+                    </div>
+
                 </div>
 
-                <div class="servicio">
-                    <span>📲</span>
-                    <h3>Tablets</h3>
-                    <p>
-                        Diagnóstico y reparación
-                        de diferentes modelos.
-                    </p>
+
+                <div class="reparacion">
+
+                    <span>
+                        🔌
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Conector de carga
+                        </h3>
+
+                        <p>
+                            Revisión y reparación del puerto.
+                        </p>
+
+                    </div>
+
                 </div>
+
+
+                <div class="reparacion">
+
+                    <span>
+                        ⚙️
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Problemas de software
+                        </h3>
+
+                        <p>
+                            Diagnóstico y solución del sistema.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRESUPUESTO -->
+
+            <div class="presupuesto">
+
+                <div>
+
+                    <h3>
+                        ¿Necesitás un presupuesto?
+                    </h3>
+
+                    <p>
+                        Contanos qué le sucede a tu dispositivo
+                        y te ayudamos.
+                    </p>
+
+                </div>
+
+                <button onclick="irAlFormulario()">
+                    Solicitar presupuesto →
+                </button>
+
+            </div>
+
+
+
+            <!-- FORMULARIO -->
+
+            <div class="formulario-reparacion"
+                 id="formulario">
+
+                <div class="titulo-formulario">
+
+                    <p>
+                        SOLICITÁ TU PRESUPUESTO
+                    </p>
+
+                    <h2>
+                        Contanos qué le pasa a tu dispositivo
+                    </h2>
+
+                </div>
+
+
+                <form id="formulario-reparacion">
+
+
+                    <div class="campo">
+
+                        <label for="nombre">
+                            Nombre
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            placeholder="Tu nombre"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="campo">
+
+                        <label for="dispositivo">
+                            Dispositivo
+                        </label>
+
+                        <select id="dispositivo" required>
+
+                            <option value="">
+                                Seleccioná un dispositivo
+                            </option>
+
+                            <option value="Celular">
+                                📱 Celular
+                            </option>
+
+                            <option value="Notebook">
+                                💻 Notebook
+                            </option>
+
+                            <option value="Tablet">
+                                📲 Tablet
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="campo">
+
+                        <label for="modelo">
+                            Modelo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="modelo"
+                            placeholder="Ej: Samsung Galaxy A54"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="campo">
+
+                        <label for="problema">
+                            ¿Qué problema tiene?
+                        </label>
+
+                        <textarea
+                            id="problema"
+                            placeholder="Describí brevemente el problema..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <button
+                        type="submit"
+                        class="boton-formulario">
+
+                        Solicitar presupuesto →
+
+                    </button>
+
+                </form>
 
             </div>
 
         </section>
 
 
-        <!-- NOSOTROS -->
+
+        <!-- ================= NOSOTROS ================= -->
+
         <section id="nosotros" class="nosotros">
 
             <div>
-                <p class="mini-titulo">SOBRE TECNOFIX</p>
+
+                <p class="mini-titulo">
+                    SOBRE TECNOFIX
+                </p>
 
                 <h2>
                     Tecnología sin complicaciones.
                 </h2>
 
                 <p>
-                    Somos un local ficticio especializado en
-                    tecnología y reparación de dispositivos.
-                    Nuestro objetivo es ofrecer soluciones rápidas,
-                    claras y confiables.
+                    Somos un local ficticio especializado
+                    en tecnología y reparación de dispositivos.
+                    Nuestro objetivo es ofrecer soluciones
+                    rápidas, claras y confiables.
                 </p>
 
+
                 <ul>
-                    <li>✓ Diagnóstico técnico</li>
-                    <li>✓ Atención personalizada</li>
-                    <li>✓ Garantía en reparaciones</li>
-                    <li>✓ Accesorios y dispositivos</li>
+
+                    <li>
+                        ✓ Diagnóstico técnico
+                    </li>
+
+                    <li>
+                        ✓ Atención personalizada
+                    </li>
+
+                    <li>
+                        ✓ Garantía en reparaciones
+                    </li>
+
+                    <li>
+                        ✓ Accesorios y dispositivos
+                    </li>
+
                 </ul>
+
             </div>
 
         </section>
 
 
-        <!-- CONTACTO -->
+
+        <!-- ================= CONTACTO ================= -->
+
         <section id="contacto" class="contacto">
 
             <div class="titulo-seccion">
-                <p>ESTAMOS PARA AYUDARTE</p>
-                <h2>Contacto</h2>
+
+                <p>
+                    ESTAMOS PARA AYUDARTE
+                </p>
+
+                <h2>
+                    Contacto
+                </h2>
+
             </div>
+
 
             <div class="contacto-contenido">
 
-                <div>
-                    <h3>📍 Ubicación</h3>
-                    <p>Av. Tecnología 1234</p>
-                    <p>Ciudad Digital</p>
-                </div>
 
                 <div>
-                    <h3>🕒 Horarios</h3>
-                    <p>Lunes a viernes: 9:00 - 19:00</p>
-                    <p>Sábados: 9:00 - 13:00</p>
+
+                    <h3>
+                        📍 Ubicación
+                    </h3>
+
+                    <p>
+                        Av. Tecnología 1234
+                    </p>
+
+                    <p>
+                        Ciudad Digital
+                    </p>
+
                 </div>
 
+
+
                 <div>
-                    <h3>📞 Contacto</h3>
-                    <p>+54 9 11 5555-5555</p>
-                    <p>info@tecnofix.com</p>
+
+                    <h3>
+                        🕒 Horarios
+                    </h3>
+
+                    <p>
+                        Lunes a viernes: 9:00 - 19:00
+                    </p>
+
+                    <p>
+                        Sábados: 9:00 - 13:00
+                    </p>
+
+                </div>
+
+
+
+                <div>
+
+                    <h3>
+                        📞 Contacto
+                    </h3>
+
+                    <p>
+                        +54 9 11 5555-5555
+                    </p>
+
+                    <p>
+                        info@tecnofix.com
+                    </p>
+
                 </div>
 
             </div>
@@ -389,9 +709,19 @@
     </main>
 
 
+
+    <!-- ================= FOOTER ================= -->
+
     <footer>
-        <p>© 2026 TecnoFix — Proyecto ficticio</p>
+
+        <p>
+            © 2026 TecnoFix — Proyecto ficticio
+        </p>
+
     </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>
