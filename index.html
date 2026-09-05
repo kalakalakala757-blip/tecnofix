@@ -64,45 +64,149 @@
         </section>
 
 
-        <!-- PRODUCTOS -->
-        <section id="productos">
+<!-- PRODUCTOS -->
+<section id="productos">
 
-            <div class="titulo-seccion">
-                <p>LO MÁS DESTACADO</p>
-                <h2>Productos</h2>
+    <div class="titulo-seccion">
+        <p>TECNOLOGÍA PARA VOS</p>
+        <h2>Productos destacados</h2>
+    </div>
+
+    <div class="filtros">
+        <button class="filtro activo" onclick="filtrarProductos('todos')">
+            Todos
+        </button>
+
+        <button class="filtro" onclick="filtrarProductos('celulares')">
+            Celulares
+        </button>
+
+        <button class="filtro" onclick="filtrarProductos('audio')">
+            Audio
+        </button>
+
+        <button class="filtro" onclick="filtrarProductos('accesorios')">
+            Accesorios
+        </button>
+    </div>
+
+    <div class="productos">
+
+        <article class="producto" data-categoria="celulares">
+
+            <div class="producto-imagen">
+                📱
             </div>
 
-            <div class="productos">
+            <div class="producto-info">
+                <span class="categoria">CELULAR</span>
 
-                <article class="producto">
-                    <div class="producto-icono">📱</div>
-                    <h3>Smartphones</h3>
-                    <p>Equipos modernos para todos los días.</p>
-                    <strong>Desde $199.999</strong>
-                    <button>Consultar</button>
-                </article>
+                <h3>Nova X Pro</h3>
 
-                <article class="producto">
-                    <div class="producto-icono">🎧</div>
-                    <h3>Auriculares</h3>
-                    <p>Sonido inalámbrico y alta calidad.</p>
-                    <strong>Desde $29.999</strong>
-                    <button>Consultar</button>
-                </article>
+                <p>
+                    Smartphone de última generación
+                    con pantalla de alta resolución.
+                </p>
 
-                <article class="producto">
-                    <div class="producto-icono">⌨️</div>
-                    <h3>Accesorios</h3>
-                    <p>Cargadores, cables, teclados y más.</p>
-                    <strong>Desde $9.999</strong>
-                    <button>Consultar</button>
-                </article>
+                <div class="precio">
+                    $499.999
+                </div>
 
+                <button onclick="consultarProducto('Nova X Pro')">
+                    Consultar
+                </button>
             </div>
 
-        </section>
+        </article>
 
 
+        <article class="producto" data-categoria="audio">
+
+            <div class="producto-imagen">
+                🎧
+            </div>
+
+            <div class="producto-info">
+                <span class="categoria">AUDIO</span>
+
+                <h3>SoundBeat Air</h3>
+
+                <p>
+                    Auriculares inalámbricos con
+                    cancelación de ruido.
+                </p>
+
+                <div class="precio">
+                    $79.999
+                </div>
+
+                <button onclick="consultarProducto('SoundBeat Air')">
+                    Consultar
+                </button>
+            </div>
+
+        </article>
+
+
+        <article class="producto" data-categoria="accesorios">
+
+            <div class="producto-imagen">
+                🔋
+            </div>
+
+            <div class="producto-info">
+                <span class="categoria">ACCESORIO</span>
+
+                <h3>PowerCharge 30W</h3>
+
+                <p>
+                    Cargador rápido compatible con
+                    múltiples dispositivos.
+                </p>
+
+                <div class="precio">
+                    $24.999
+                </div>
+
+                <button onclick="consultarProducto('PowerCharge 30W')">
+                    Consultar
+                </button>
+            </div>
+
+        </article>
+
+
+        <article class="producto" data-categoria="accesorios">
+
+            <div class="producto-imagen">
+                ⌨️
+            </div>
+
+            <div class="producto-info">
+                <span class="categoria">ACCESORIO</span>
+
+                <h3>KeyPro RGB</h3>
+
+                <p>
+                    Teclado mecánico para gaming
+                    y trabajo.
+                </p>
+
+                <div class="precio">
+                    $64.999
+                </div>
+
+                <button onclick="consultarProducto('KeyPro RGB')">
+                    Consultar
+                </button>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+        
         <!-- REPARACIONES -->
         <section id="reparaciones" class="reparaciones">
 
