@@ -49,14 +49,91 @@
 
                     <a href="#reparaciones" class="boton secundario">
                         Reparaciones
-                    </a>
-                </div>
-            </div>
+<!-- REPARACIONES -->
+<section id="reparaciones" class="reparaciones">
 
-            <div class="hero-card">
-                <div class="icono">📱</div>
-                <h2>Servicio Técnico</h2>
-                <p>
+    <div class="titulo-seccion">
+        <p>SERVICIO TÉCNICO</p>
+        <h2>¿Qué dispositivo necesitás reparar?</h2>
+    </div>
+
+    <div class="selector-dispositivos">
+
+        <button class="dispositivo activo"
+                onclick="mostrarReparaciones('celular', this)">
+            📱
+            <span>Celular</span>
+        </button>
+
+        <button class="dispositivo"
+                onclick="mostrarReparaciones('notebook', this)">
+            💻
+            <span>Notebook</span>
+        </button>
+
+        <button class="dispositivo"
+                onclick="mostrarReparaciones('tablet', this)">
+            📲
+            <span>Tablet</span>
+        </button>
+
+    </div>
+
+
+    <div id="lista-reparaciones" class="lista-reparaciones">
+
+        <div class="reparacion">
+            <span>🔧</span>
+            <div>
+                <h3>Cambio de pantalla</h3>
+                <p>Reemplazo de pantalla dañada.</p>
+            </div>
+        </div>
+
+        <div class="reparacion">
+            <span>🔋</span>
+            <div>
+                <h3>Cambio de batería</h3>
+                <p>Reemplazo de batería desgastada.</p>
+            </div>
+        </div>
+
+        <div class="reparacion">
+            <span>🔌</span>
+            <div>
+                <h3>Conector de carga</h3>
+                <p>Revisión y reparación del puerto de carga.</p>
+            </div>
+        </div>
+
+        <div class="reparacion">
+            <span>⚙️</span>
+            <div>
+                <h3>Problemas de software</h3>
+                <p>Diagnóstico y solución de errores del sistema.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="presupuesto">
+
+        <div>
+            <h3>¿Necesitás un presupuesto?</h3>
+            <p>
+                Contanos qué le sucede a tu dispositivo
+                y te ayudamos.
+            </p>
+        </div>
+
+        <button onclick="solicitarPresupuesto()">
+            Solicitar presupuesto →
+        </button>
+
+    </div>
+
+</section>
                     Celulares · Tablets · Notebooks
                 </p>
             </div>
