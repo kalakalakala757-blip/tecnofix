@@ -451,3 +451,90 @@ footer {
         font-size: 34px;
     }
 }
+/* =========================
+   FILTROS DE PRODUCTOS
+========================= */
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filtro {
+    padding: 10px 20px;
+
+    background: transparent;
+    border: 1px solid #334155;
+    border-radius: 20px;
+
+    color: #cbd5e1;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.filtro:hover,
+.filtro.activo {
+    background: #00e5ff;
+    color: #061018;
+    border-color: #00e5ff;
+}
+
+
+/* =========================
+   PRODUCTOS NUEVOS
+========================= */
+
+.producto {
+    overflow: hidden;
+    padding: 0;
+}
+
+.producto-imagen {
+    height: 210px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 90px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 229, 255, 0.12),
+            transparent 65%
+        );
+}
+
+.producto-info {
+    padding: 25px;
+}
+
+.categoria {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #00e5ff;
+}
+
+.producto-info h3 {
+    margin-top: 8px;
+}
+
+.producto-info p {
+    min-height: 50px;
+}
+
+.precio {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.producto button {
+    font-size: 15px;
+}
